@@ -1,0 +1,20 @@
+.contenedorArticulos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.contanedorChildren{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4rem;
+    width: 100%;
+    height: auto;
+}
+

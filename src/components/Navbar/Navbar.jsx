@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CartWidget from './CartWidget';
 import './navbar.css';
-
+import { Link } from 'react-router-dom'
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false);
 
@@ -17,10 +17,11 @@ const Navbar = () => {
         <div className='headerNav'>
             <nav>
                 <ul className={`navbar ${isActive ? 'active' : ''}`}>
-                    <li><a href="" onClick={handleNavLinkClick}>INICIO</a></li>
-                    <li><a href="" onClick={handleNavLinkClick}>REMERAS</a></li>
-                    <li><a href="" onClick={handleNavLinkClick}>CAMPERAS</a></li>
-                    <li><a href="" onClick={handleNavLinkClick}>BUZOS</a></li>
+                    <li><Link to="/" onClick={handleNavLinkClick}>INICIO</Link></li>
+                    <li><Link to="/hombre" onClick={handleNavLinkClick}>HOMBRE</Link></li>
+                    <li><Link to="/mujer" onClick={handleNavLinkClick}>MUJER</Link></li>
+                    <li><Link to="/joyeria" onClick={handleNavLinkClick}>JOYERIA</Link></li>
+                    <li><Link to="/electronica" onClick={handleNavLinkClick}>ELECTRONICA</Link></li>
                 </ul>
                 <div className={`toggle ${isActive ? 'active' : ''}`} onClick={toggleNavbar}>
                     <div className="toggle__line toggle__line--up"></div>

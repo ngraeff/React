@@ -1,8 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Card from './components/Card/Card'
 import Navbar from './components/Navbar/Navbar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import {Route , Routes} from 'react-router'
+import Home from './pages/Home'
+import Hombre from './pages/Hombre'
+import Prenda from './pages/Prenda'
+import Electronica from './pages/Electronica'
+import Joyeria from './pages/Joyeria'
+import Mujer from './pages/Mujer'
+
+
+
 
 /* Componentes */
 /* props = propiedades */
@@ -20,7 +28,20 @@ function App() {
   
     <div >
       <Navbar/>
-      <ItemListContainer greeting ="Bienvenidos a mi Web"/>
+      
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/hombre' element={<Hombre/>}></Route>
+        <Route path='/electronica' element={<Electronica/>}></Route>
+        <Route path='/joyeria' element={<Joyeria/>}></Route>
+        <Route path='/mujer' element={<Mujer/>}></Route>
+        <Route path='/prenda/:id' element={<Prenda/>}></Route>
+
+        
+
+      </Routes>
+
+      
     </div>
     
   )
