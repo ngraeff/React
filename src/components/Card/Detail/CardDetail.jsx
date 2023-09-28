@@ -11,7 +11,7 @@ const CardDetail = ({item}) => {
             <div className="cardPieD">
                 <h5 className="cardTituloD">{item.title}</h5>
                 <p className="cardDescripcionD">{item.description}</p>
-                <p className="cardPriceP">{item.price}</p>
+                <p className="cardPriceP">${item.price}</p>
             </div>
         </div>
     );

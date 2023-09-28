@@ -6,8 +6,8 @@ import './ItemDetailContainer.css';
 const ItemDetail = ({ item }) => {
     return (
         <>{
-            <div className="elemento">
-                <CardDetail  item={item} key={item.id}/>
+            <div className="elemento" key={item.id}>
+                <CardDetail  item={item} />
                 
             </div>
         }
